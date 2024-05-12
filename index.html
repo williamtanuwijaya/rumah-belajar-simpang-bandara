@@ -5,12 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rumah Belajar Simpang Bandara</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <!-- Menambahkan Font Awesome untuk ikon -->
 </head>
 
 <body>
+  <div id="popup-box" class="popup-box">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="./screen/daftar_screen.html" class="btn btn-primary">Daftar</a>
+    </div>
+  </div>
   <header class="header">
     <div class="container">
       <h1>RUMAH BELAJAR SIMPANG BANDARA</h1>
@@ -59,6 +66,8 @@
       <p>&copy; 2024 Rumah Belajar Simpang Bandara</p>
     </div>
   </footer>
+
+  <script src="./javascript/script.js"></script>
 </body>
 
 </html>
