@@ -169,3 +169,83 @@ body {
   border: 5px;
   border-color: white;
 }
+
+.images {
+  display: flex;
+  width: 100%;
+  transition: 2s;
+  animation: slide 15s infinite;
+}
+
+.images img {
+  max-width: 100%; /* Menjadikan gambar memiliki lebar maksimum 100% dari parentnya */
+  height: auto;
+}
+
+
+.wrapper {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+#slide-1:target~.images {
+  margin-left: 0%;
+}
+#slide-2:target~.images {
+  margin-left: -100%;
+}
+#slide-3:target~.images {
+  margin-left: -200%;
+}
+#slide-4:target~.images {
+  margin-left: -300%;
+}
+#slide-5:target~.images {
+  margin-left: -400%;
+}
+
+.navigation a:hover {
+  background-color: #555;
+}
+
+.navigation {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin-top: -50px;
+}
+
+@keyframes slide {
+  0%, 20% {
+    margin-left: 0%;
+  }
+  25%, 45% {
+    margin-left: -100%;
+  }
+  50%, 70% {
+    margin-left: -200%;
+  }
+  75%, 95% {
+    margin-left: -300%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 90%;
+  }
+}
